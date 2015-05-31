@@ -6,6 +6,7 @@ import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
+import javax.persistence.TypedQuery;
 
 import org.springframework.stereotype.Repository;
 
@@ -28,20 +29,17 @@ public class GoalRepositoryImpl implements GoalRepository {
 		return goal;
 	}
 
-	@SuppressWarnings({ "rawtypes", "unchecked" })
 	public List<Goal> loadAll() {
-		Query query = em.createQuery("Select g from Goal g"); // this is JPQL not SQL
 		
-		List goals = query.getResultList();
-		
-		return goals;
+		TypedQuery<Goal> query = em.createNamedQuery(Goal.FIND_ALL_GOALS, Goal.class);
+		return query.getResultList();
+
 	}
 	
-	// remember that this JPQL works with OBJECTS so "e.goal.id" is like Java's object dot notation
-	@SuppressWarnings("unchecked")
+	
 	public List<GoalReport> findAllGoalReports() {
-		Query query = em.createQuery("Select new com.pluralsight.model.GoalReport(g.minutes, e.minutes, e.activity) "
-				+ "from Goal g, Exercise e where g.id = e.goal.id");
+		
+		TypedQuery<GoalReport> query = em.createNamedQuery(Goal.FIND_GOAL_REPORTS, GoalReport.class);
 		
 		return query.getResultList();
 	}
