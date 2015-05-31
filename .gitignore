@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #################
 # Files
 #################
@@ -24,6 +25,9 @@ pom.xml.next
 release.properties
 dependency-reduced-pom.xml
 buildNumber.properties
+=======
+*.class
+>>>>>>> c85e9146856cf7f17d8ffedd2d0cbaaf621ee66c
 
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
@@ -35,4 +39,7 @@ buildNumber.properties
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+<<<<<<< HEAD
 
+=======
+>>>>>>> c85e9146856cf7f17d8ffedd2d0cbaaf621ee66c
