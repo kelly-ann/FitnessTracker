@@ -1,9 +1,6 @@
-spring_mvc_base
+FitnessTracker
 ===============
 
-Base project used for my Pluralsight Spring JPA and Spring Security courses among others.
+A A SpringMVC, JPA, Hibernate, Maven, Spring Data web app connected to a MySQL db.  
 
-http://pluralsight.com/training/Courses/TableOfContents/maven-fundamentals
-
-http://pluralsight.com/training/Courses/TableOfContents/springmvc-intro
-
+The FitnessTracker app allows users to first set a Fitness Goal, then to add Exercises to that goal and to view a GoalReport of all the Goals and Exercises stored in the database.
