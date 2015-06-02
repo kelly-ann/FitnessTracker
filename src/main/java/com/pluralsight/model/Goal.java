@@ -20,12 +20,12 @@ import org.hibernate.validator.constraints.Range;
 // note: you can create a NamedQueries class separate from the object that it's querying against
 @Entity
 @Table(name="goals")
-@NamedQueries({
-	// remember that this JPQL works with OBJECTS so "e.goal.id" is like Java's object dot notation
-	@NamedQuery(name=Goal.FIND_GOAL_REPORTS, query="Select new com.pluralsight.model.GoalReport(g.minutes, e.minutes, e.activity) "
-				+ "from Goal g, Exercise e where g.id = e.goal.id"),
-	@NamedQuery(name=Goal.FIND_ALL_GOALS, query="Select g from Goal g") // this is JPQL not SQL
-})
+//@NamedQueries({
+//	// remember that this JPQL works with OBJECTS so "e.goal.id" is like Java's object dot notation
+//	@NamedQuery(name=Goal.FIND_GOAL_REPORTS, query="Select new com.pluralsight.model.GoalReport(g.minutes, e.minutes, e.activity) "
+//				+ "from Goal g, Exercise e where g.id = e.goal.id"),
+//	@NamedQuery(name=Goal.FIND_ALL_GOALS, query="Select g from Goal g") // this is JPQL not SQL
+//})
 public class Goal {
 	
 	public static final String FIND_GOAL_REPORTS = "findGoalReports";
