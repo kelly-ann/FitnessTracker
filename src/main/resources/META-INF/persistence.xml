@@ -3,6 +3,8 @@
 	xsi:schemaLocation="http://java.sun.com/xml/ns/peristence http://java.sun.com/xml/ns/persistence_2_0.xsd"
 	version="2.0">
 
+<!-- The persistence.xml creates a blank persistence object  that is required by JPA (Java Persistence XML). -->
+
 	<persistence-unit name="punit">
 	
 	</persistence-unit>
